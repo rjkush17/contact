@@ -1,3 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;1,500;1,700&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0; 
+}
+
+
+
+@layer components {
+    .input {
+      @apply border-2 border-black h-10 focus:outline-none focus:border-2 focus:border-orange-500 rounded-lg pl-3 text-black;
+    }
+    
+  }
+
+  @layer components {
+    .button-cus {
+      @apply border border-heading hover:bg-heading ;
+    }
+    
+    .button {
+      @apply h-10 px-5 transition-colors duration-150 border rounded-lg hover:text-white ;
+    }
+  }
+  
+  
+

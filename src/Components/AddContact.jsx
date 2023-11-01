@@ -19,55 +19,63 @@ function AddContact() {
   };
 
   return (
-    <div>
-      <header>AddContact</header>
-      <form onSubmit={handleForm}>
-        <div className="label-wrapper">
+    <div className="py-10 text-center w-10/12 mx-auto ">
+      <header className="text-3xl font-bold text-heading">Add Contact</header>
+      <form onSubmit={handleForm} className="flex justify-between items-center">
+        <div className="label-wrapper flex flex-col">
+        <label htmlFor="name">Contact Name</label>
           <input
             type="text"
-            className="border-2 border-black border-solid"
+            className="input"
             id="name"
             value={inputValues.name}
             name="name"
             onChange={handleValues}
+            placeholder="Enter Contact Name"
           />
-          <label htmlFor="name">Contact Name</label>
+          
         </div>
 
-        <div className="label-wrapper">
+        <div className="label-wrapper flex flex-col">
+        <label htmlFor="number">Phone Number</label>
           <input
             type="number"
-            className="border-2 border-black border-solid"
+            className="input"
             id="number"
             name="number"
             onChange={handleValues}
+            placeholder="Enter Contact Number"
           />
-          <label htmlFor="number">Phone Number</label>
+          
         </div>
 
-        <div className="label-wrapper">
+        <div className="label-wrapper flex flex-col">
+        <label htmlFor="email">Email Address</label>
           <input
             type="email"
-            className="border-2 border-black border-solid"
+            className="input"
             id="email"
             name="email"
             onChange={handleValues}
+            placeholder="Enter Email"
           />
-          <label htmlFor="email">Email Address</label>
+          
         </div>
 
-        <div className="label-wrapper">
+        <div className="label-wrapper flex flex-col">
+        <label htmlFor="label">label</label>
           <input
             type="text"
-            className="border-2 border-black border-solid"
+            className="input"
             id="label"
             name="label"
             onChange={handleValues}
+            placeholder="Enter Lable Name"
           />
-          <label htmlFor="label">label</label>
+         
         </div>
 
-        <button type="submit">Add Contact</button>
+        <button type="submit" className="button-cus button">Add Contact</button>
       </form>
     </div>
   );
